@@ -1,0 +1,1017 @@
+{
+  "bio": {
+      "name": "Prashanth Kumar",
+      "gender": "male",
+      "dob": "1982/03/13"
+  },
+  "folders": {
+      "name": "root",
+      "type": "directory",
+      "contents": [
+          {
+              "name": "src",
+              "type": "directory",
+              "contents": []
+          },
+          {
+              "name": "data",
+              "type": "directory",
+              "contents": [
+                  {
+                      "name": "export_date",
+                      "type": "directory",
+                      "contents": [
+                          {
+                              "name": "raw",
+                              "type": "directory",
+                              "contents": []
+                          },
+                          {
+                              "name": "parsed",
+                              "type": "directory",
+                              "contents": []
+                          },
+                          {
+                              "name": "wrangled",
+                              "type": "directory",
+                              "contents": []
+                          },
+                          {
+                              "name": "summarized",
+                              "type": "directory",
+                              "contents": []
+                          }
+                      ]
+                  }
+              ]
+          }
+      ]
+  },
+  "logging": {
+      "enabled": true,
+      "folder": "logs",
+      "verbosity": 2
+  },
+  "parameters": [
+      {
+          "data_wrangler": {
+              "file_path": "active-energy-burned.csv",
+              "filter_sources": null
+          },
+          "type_summary": {
+              "measures": [
+                  "sum",
+                  "mean",
+                  "median"
+              ],
+              "ffill": false,
+              "normalization": null,
+              "target_config": {
+                  "interval": "1D",
+                  "value": 3000,
+                  "units": "cal"
+              },
+              "agg_sources": "mean",
+              "units": "cal"
+          },
+          "sweep": [
+              {
+                  "interval": "6H"
+              },
+              {
+                  "interval": "1D"
+              },
+              {
+                  "interval": "1W"
+              },
+              {
+                  "interval": "1M"
+              },
+              {
+                  "interval": "1Y"
+              }
+          ]
+      },
+      {
+          "data_wrangler": {
+              "file_path": "apple-exercise-time.csv",
+              "filter_sources": null
+          },
+          "type_summary": {
+              "measures": [
+                  "sum",
+                  "mean",
+                  "median"
+              ],
+              "ffill": true,
+              "normalization": null,
+              "target_config": {
+                  "interval": "1D",
+                  "value": 30,
+                  "units": "minutes"
+              },
+              "agg_sources": "mean"
+          },
+          "sweep": [
+              {
+                  "interval": "6H"
+              },
+              {
+                  "interval": "1D"
+              },
+              {
+                  "interval": "1W"
+              },
+              {
+                  "interval": "1M"
+              },
+              {
+                  "interval": "1Y"
+              }
+          ]
+      },
+      {
+          "data_wrangler": {
+              "file_path": "apple-stand-time.csv",
+              "filter_sources": null
+          },
+          "type_summary": {
+              "measures": [
+                  "sum",
+                  "mean",
+                  "median"
+              ],
+              "ffill": false,
+              "normalization": null,
+              "target_config": {
+                  "interval": "1D",
+                  "value": 720,
+                  "units": "min"
+              },
+              "agg_sources": "mean",
+              "units": "min"
+          },
+          "sweep": [
+              {
+                  "interval": "6H"
+              },
+              {
+                  "interval": "1D"
+              },
+              {
+                  "interval": "1W"
+              },
+              {
+                  "interval": "1M"
+              },
+              {
+                  "interval": "1Y"
+              }
+          ]
+      },
+      {
+          "data_wrangler": {
+              "file_path": "apple-walking-steadiness.csv",
+              "filter_sources": null
+          },
+          "type_summary": {
+              "measures": [
+                  "sum",
+                  "mean",
+                  "median"
+              ],
+              "units": "%",
+              "ffill": false,
+              "normalization": null,
+              "target_config": {
+                  "interval": "1D",
+                  "value": 85,
+                  "units": "%"
+              },
+              "agg_sources": "mean"
+          },
+          "sweep": [
+              {
+                  "interval": "6H"
+              },
+              {
+                  "interval": "1D"
+              },
+              {
+                  "interval": "1W"
+              },
+              {
+                  "interval": "1M"
+              },
+              {
+                  "interval": "1Y"
+              }
+          ]
+      },
+      {
+          "data_wrangler": {
+              "file_path": "basal-energy-burned.csv",
+              "filter_sources": null
+          },
+          "type_summary": {
+              "measures": [
+                  "sum",
+                  "mean",
+                  "median"
+              ],
+              "ffill": false,
+              "normalization": null,
+              "target_config": {
+                  "interval": "1D",
+                  "value": 1800,
+                  "units": "cal"
+              },
+              "agg_sources": "mean",
+              "units": "cal"
+          },
+          "sweep": [
+              {
+                  "interval": "6H"
+              },
+              {
+                  "interval": "1D"
+              },
+              {
+                  "interval": "1W"
+              },
+              {
+                  "interval": "1M"
+              },
+              {
+                  "interval": "1Y"
+              }
+          ]
+      },
+      {
+          "data_wrangler": {
+              "file_path": "body-fat-percentage.csv",
+              "filter_sources": null
+          },
+          "type_summary": {
+              "measures": [
+                  "mean",
+                  "median"
+              ],
+              "ffill": true,
+              "normalization": null,
+              "target_config": {
+                  "interval": "1D",
+                  "value": 18,
+                  "units": "%"
+              },
+              "agg_sources": "mean",
+              "units": "%"
+          },
+          "sweep": [
+              {
+                  "interval": "6H"
+              },
+              {
+                  "interval": "1D"
+              },
+              {
+                  "interval": "1W"
+              },
+              {
+                  "interval": "1M"
+              },
+              {
+                  "interval": "1Y"
+              }
+          ]
+      },
+      {
+          "data_wrangler": {
+              "file_path": "body-mass.csv",
+              "filter_sources": null
+          },
+          "type_summary": {
+              "measures": [
+                  "mean",
+                  "median"
+              ],
+              "ffill": true,
+              "normalization": 165.347,
+              "agg_sources": "mean",
+              "units": "lb"
+          },
+          "sweep": [
+              {
+                  "interval": "6H"
+              },
+              {
+                  "interval": "1D"
+              },
+              {
+                  "interval": "1W"
+              },
+              {
+                  "interval": "1M"
+              },
+              {
+                  "interval": "1Y"
+              }
+          ]
+      },
+      {
+          "data_wrangler": {
+              "file_path": "body-mass-index.csv",
+              "filter_sources": null
+          },
+          "type_summary": {
+              "measures": [
+                  "mean",
+                  "median"
+              ],
+              "ffill": true,
+              "normalization": 23,
+              "agg_sources": "mean",
+              "units": ""
+          },
+          "sweep": [
+              {
+                  "interval": "6H"
+              },
+              {
+                  "interval": "1D"
+              },
+              {
+                  "interval": "1W"
+              },
+              {
+                  "interval": "1M"
+              },
+              {
+                  "interval": "1Y"
+              }
+          ]
+      },
+      {
+          "data_wrangler": {
+              "file_path": "distance-walking-running.csv",
+              "filter_sources": null
+          },
+          "type_summary": {
+              "measures": [
+                  "sum",
+                  "mean",
+                  "median"
+              ],
+              "interval": "6H",
+              "ffill": false,
+              "normalization": null,
+              "target_config": {
+                  "interval": "1D",
+                  "value": 3.12,
+                  "units": "mi"
+              },
+              "agg_sources": "max",
+              "units": "mi"
+          },
+          "sweep": [
+              {
+                  "interval": "6H"
+              },
+              {
+                  "interval": "1D"
+              },
+              {
+                  "interval": "1W"
+              },
+              {
+                  "interval": "1M"
+              },
+              {
+                  "interval": "1Y"
+              }
+          ]
+      },
+      {
+          "data_wrangler": {
+              "file_path": "distance-walking-running.csv",
+              "filter_sources": null
+          },
+          "type_summary": {
+              "measures": [
+                  "sum",
+                  "mean",
+                  "median"
+              ],
+              "interval": "6H",
+              "ffill": false,
+              "normalization": null,
+              "target_config": {
+                  "interval": "1D",
+                  "value": 3.12,
+                  "units": "mi"
+              },
+              "agg_sources": "max",
+              "units": "mi"
+          },
+          "sweep": [
+              {
+                  "interval": "6H"
+              },
+              {
+                  "interval": "1D"
+              },
+              {
+                  "interval": "1W"
+              },
+              {
+                  "interval": "1M"
+              },
+              {
+                  "interval": "1Y"
+              }
+          ]
+      },
+      {
+          "data_wrangler": {
+              "file_path": "flights-climbed.csv",
+              "filter_sources": null
+          },
+          "type_summary": {
+              "measures": [
+                  "sum",
+                  "mean",
+                  "median"
+              ],
+              "ffill": false,
+              "normalization": null,
+              "target_config": {
+                  "interval": "1D",
+                  "value": 10,
+                  "units": ""
+              },
+              "agg_sources": "max",
+              "units": ""
+          },
+          "sweep": [
+              {
+                  "interval": "6H"
+              },
+              {
+                  "interval": "1D"
+              },
+              {
+                  "interval": "1W"
+              },
+              {
+                  "interval": "1M"
+              },
+              {
+                  "interval": "1Y"
+              }
+          ]
+      },
+      {
+          "data_wrangler": {
+              "file_path": "hk-data-type-sleep-duration-goal.csv",
+              "filter_sources": null
+          },
+          "type_summary": {
+              "measures": [
+                  "max",
+                  "mean",
+                  "median"
+              ],
+              "ffill": false,
+              "normalization": null,
+              "target_config": {
+                  "interval": "1D",
+                  "value": 7,
+                  "units": "hour"
+              },
+              "agg_sources": "mean",
+              "units": "hour"
+          },
+          "sweep": [
+              {
+                  "interval": "6H"
+              },
+              {
+                  "interval": "1D"
+              },
+              {
+                  "interval": "1W"
+              },
+              {
+                  "interval": "1M"
+              },
+              {
+                  "interval": "1Y"
+              }
+          ]
+      },
+      {
+          "data_wrangler": {
+              "file_path": "headphone-audio-exposure.csv",
+              "filter_sources": null
+          },
+          "type_summary": {
+              "measures": [
+                  "sum",
+                  "mean",
+                  "median"
+              ],
+              "ffill": false,
+              "normalization": null,
+              "target_config": {
+                  "interval": "1D",
+                  "value": 70,
+                  "units": "dB"
+              },
+              "agg_sources": "mean",
+              "units": "dB"
+          },
+          "sweep": [
+              {
+                  "interval": "6H"
+              },
+              {
+                  "interval": "1D"
+              },
+              {
+                  "interval": "1W"
+              },
+              {
+                  "interval": "1M"
+              },
+              {
+                  "interval": "1Y"
+              }
+          ]
+      },
+      {
+          "data_wrangler": {
+              "file_path": "heart-rate.csv",
+              "filter_sources": null
+          },
+          "type_summary": {
+              "measures": [
+                  "mean",
+                  "median"
+              ],
+              "ffill": true,
+              "normalization": 70,
+              "target_config": null,
+              "agg_sources": "mean",
+              "units": "count/min"
+          },
+          "sweep": [
+              {
+                  "interval": "6H"
+              },
+              {
+                  "interval": "1D"
+              },
+              {
+                  "interval": "1W"
+              },
+              {
+                  "interval": "1M"
+              },
+              {
+                  "interval": "1Y"
+              }
+          ]
+      },
+      {
+          "data_wrangler": {
+              "file_path": "heart-rate-variability-sdnn.csv",
+              "filter_sources": null
+          },
+          "type_summary": {
+              "measures": [
+                  "max",
+                  "mean",
+                  "median"
+              ],
+              "ffill": false,
+              "normalization": 40,
+              "target_config": null,
+              "agg_sources": "max",
+              "units": "ms"
+          },
+          "sweep": [
+              {
+                  "interval": "6H"
+              },
+              {
+                  "interval": "1D"
+              },
+              {
+                  "interval": "1W"
+              },
+              {
+                  "interval": "1M"
+              },
+              {
+                  "interval": "1Y"
+              }
+          ]
+      },
+      {
+          "data_wrangler": {
+              "file_path": "lean-body-mass.csv",
+              "filter_sources": null
+          },
+          "type_summary": {
+              "measures": [
+                  "mean",
+                  "median"
+              ],
+              "ffill": true,
+              "normalization": 132.277,
+              "agg_sources": "mean",
+              "units": "lb"
+          },
+          "sweep": [
+              {
+                  "interval": "6H"
+              },
+              {
+                  "interval": "1D"
+              },
+              {
+                  "interval": "1W"
+              },
+              {
+                  "interval": "1M"
+              },
+              {
+                  "interval": "1Y"
+              }
+          ]
+      },
+      {
+          "data_wrangler": {
+              "file_path": "respiratory-rate.csv",
+              "filter_sources": null
+          },
+          "type_summary": {
+              "measures": [
+                  "mean",
+                  "median"
+              ],
+              "ffill": false,
+              "normalization": 16,
+              "target_config": null,
+              "agg_sources": "mean",
+              "units": "count/min"
+          },
+          "sweep": [
+              {
+                  "interval": "6H"
+              },
+              {
+                  "interval": "1D"
+              },
+              {
+                  "interval": "1W"
+              },
+              {
+                  "interval": "1M"
+              },
+              {
+                  "interval": "1Y"
+              }
+          ]
+      },
+      {
+          "data_wrangler": {
+              "file_path": "resting-heart-rate.csv",
+              "filter_sources": null
+          },
+          "type_summary": {
+              "measures": [
+                  "mean",
+                  "median"
+              ],
+              "ffill": false,
+              "normalization": 60,
+              "target_config": null,
+              "agg_sources": "mean",
+              "units": "count/min"
+          },
+          "sweep": [
+              {
+                  "interval": "6H"
+              },
+              {
+                  "interval": "1D"
+              },
+              {
+                  "interval": "1W"
+              },
+              {
+                  "interval": "1M"
+              },
+              {
+                  "interval": "1Y"
+              }
+          ]
+      },
+      {
+          "data_wrangler": {
+              "file_path": "six-minute-walk-test-distance.csv",
+              "filter_sources": null
+          },
+          "type_summary": {
+              "measures": [
+                  "mean",
+                  "median"
+              ],
+              "ffill": false,
+              "normalization": null,
+              "target_config": {
+                  "interval": "1D",
+                  "value": 600,
+                  "units": "meter"
+              },
+              "agg_sources": "mean",
+              "units": "meter"
+          },
+          "sweep": [
+              {
+                  "interval": "6H"
+              },
+              {
+                  "interval": "1D"
+              },
+              {
+                  "interval": "1W"
+              },
+              {
+                  "interval": "1M"
+              },
+              {
+                  "interval": "1Y"
+              }
+          ]
+      },
+      {
+          "data_wrangler": {
+              "file_path": "step-count.csv",
+              "filter_sources": null
+          },
+          "type_summary": {
+              "measures": [
+                  "sum",
+                  "mean",
+                  "median"
+              ],
+              "ffill": false,
+              "normalization": null,
+              "target_config": {
+                  "interval": "1D",
+                  "value": 10000,
+                  "units": "count"
+              },
+              "agg_sources": "max",
+              "units": "count"
+          },
+          "sweep": [
+              {
+                  "interval": "6H"
+              },
+              {
+                  "interval": "1D"
+              },
+              {
+                  "interval": "1W"
+              },
+              {
+                  "interval": "1M"
+              },
+              {
+                  "interval": "1Y"
+              }
+          ]
+      },
+      {
+          "data_wrangler": {
+              "file_path": "vo2-max.csv",
+              "filter_sources": null
+          },
+          "type_summary": {
+              "measures": [
+                  "max",
+                  "mean",
+                  "median"
+              ],
+              "ffill": false,
+              "normalization": null,
+              "target_config": {
+                  "interval": "1D",
+                  "value": 45,
+                  "units": "mL/kg/min"
+              },
+              "agg_sources": "mean",
+              "units": "mL/kg/min"
+          },
+          "sweep": [
+              {
+                  "interval": "6H"
+              },
+              {
+                  "interval": "1D"
+              },
+              {
+                  "interval": "1W"
+              },
+              {
+                  "interval": "1M"
+              },
+              {
+                  "interval": "1Y"
+              }
+          ]
+      },
+      {
+          "data_wrangler": {
+              "file_path": "walking-asymmetry-percentage.csv",
+              "filter_sources": null
+          },
+          "type_summary": {
+              "measures": [
+                  "mean",
+                  "median"
+              ],
+              "ffill": false,
+              "normalization": null,
+              "target_config": {
+                  "interval": "1D",
+                  "value": 5,
+                  "units": "%"
+              },
+              "agg_sources": "mean",
+              "units": "%"
+          },
+          "sweep": [
+              {
+                  "interval": "6H"
+              },
+              {
+                  "interval": "1D"
+              },
+              {
+                  "interval": "1W"
+              },
+              {
+                  "interval": "1M"
+              },
+              {
+                  "interval": "1Y"
+              }
+          ]
+      },
+      {
+          "data_wrangler": {
+              "file_path": "walking-double-support-percentage.csv",
+              "filter_sources": null
+          },
+          "type_summary": {
+              "measures": [
+                  "mean",
+                  "median"
+              ],
+              "ffill": false,
+              "normalization": null,
+              "target_config": {
+                  "interval": "1D",
+                  "value": 50,
+                  "units": "%"
+              },
+              "agg_sources": "mean",
+              "units": "%"
+          },
+          "sweep": [
+              {
+                  "interval": "6H"
+              },
+              {
+                  "interval": "1D"
+              },
+              {
+                  "interval": "1W"
+              },
+              {
+                  "interval": "1M"
+              },
+              {
+                  "interval": "1Y"
+              }
+          ]
+      },
+      {
+          "data_wrangler": {
+              "file_path": "walking-heart-rate-average.csv",
+              "filter_sources": null
+          },
+          "type_summary": {
+              "measures": [
+                  "mean",
+                  "median"
+              ],
+              "ffill": false,
+              "normalization": 100,
+              "target_config": null,
+              "agg_sources": "mean",
+              "units": "count"
+          },
+          "sweep": [
+              {
+                  "interval": "6H"
+              },
+              {
+                  "interval": "1D"
+              },
+              {
+                  "interval": "1W"
+              },
+              {
+                  "interval": "1M"
+              },
+              {
+                  "interval": "1Y"
+              }
+          ]
+      },
+      {
+          "data_wrangler": {
+              "file_path": "walking-speed.csv",
+              "filter_sources": null
+          },
+          "type_summary": {
+              "measures": [
+                  "mean",
+                  "median"
+              ],
+              "ffill": false,
+              "normalization": 3.10686,
+              "target_config": null,
+              "agg_sources": "mean",
+              "units": "mi/hr"
+          },
+          "sweep": [
+              {
+                  "interval": "6H"
+              },
+              {
+                  "interval": "1D"
+              },
+              {
+                  "interval": "1W"
+              },
+              {
+                  "interval": "1M"
+              },
+              {
+                  "interval": "1Y"
+              }
+          ]
+      },
+      {
+          "data_wrangler": {
+              "file_path": "walking-step-length.csv",
+              "filter_sources": null
+          },
+          "type_summary": {
+              "measures": [
+                  "mean",
+                  "median"
+              ],
+              "interval": "6H",
+              "ffill": false,
+              "normalization": 31.4961,
+              "target_config": null,
+              "agg_sources": "mean",
+              "units": "in"
+          },
+          "sweep": [
+              {
+                  "interval": "6H"
+              },
+              {
+                  "interval": "1D"
+              },
+              {
+                  "interval": "1W"
+              },
+              {
+                  "interval": "1M"
+              },
+              {
+                  "interval": "1Y"
+              }
+          ]
+      }
+  ]
+}

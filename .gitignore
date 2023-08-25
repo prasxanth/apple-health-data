@@ -1,0 +1,7 @@
+.DS_Store
+
+# Ignore files in data and logs directories
+/data/*
+/logs/*
+
+
